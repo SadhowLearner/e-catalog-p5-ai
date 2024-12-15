@@ -3,7 +3,6 @@ import React, { useState } from "react";
 import { motion } from "framer-motion";
 import { cn } from "@/app/components/lib/utils";
 import Link from "next/link";
-import Image from "next/image";
 
 export const PinContainer = ({
   children,
