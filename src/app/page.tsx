@@ -1,101 +1,213 @@
+// import Image from "next/image";
 import Image from "next/image";
+import { PinContainer } from "./components/ui/3d-pin";
+import { FloatingNav } from "./components/ui/floating-navbar";
+import { HeroParallax } from "./components/ui/hero-parallax";
+import { Cover } from "./components/ui/cover";
+import { ExpandableCard } from "./components/ui/expandable-card";
+// import { motion } from "framer-motion";
 
 export default function Home() {
-  return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
+  const navItems = [
+    {
+      name: "Home",
+      link: "/",
+    },
+    {
+      name: "About",
+      link: "/about",
+    },
+    {
+      name: "Contact",
+      link: "/contact",
+    },
+  ];
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
+  const products = [
+    {
+      title: "Cryo Chat AI",
+      link: "https://cryo-chat-ai.vercel.app/",
+      thumbnail: "cryo-thumb.png",
+    },
+    {
+      title: "E-Fast",
+      link: "https://e-fast.vercel.app/",
+      thumbnail: "e-fast-thumb.svg",
+    },
+    {
+      title: "DoxSummarizer",
+      link: "https://doxsummarizer.vercel.app/",
+      thumbnail: "doxsummarizer-thumb.jpg",
+    },
+
+    {
+      title: "PyroTrip",
+      link: "https://pyrotrip.vercel.app/",
+      thumbnail: "pyrotrip-thumb.png",
+    },
+    {
+      title: "Quizlon AI",
+      link: "https://quizion-ai.vercel.app/",
+      thumbnail: "quizlon-thumb.png",
+    },
+    {
+      title: "ClassBot",
+      link: "https://chatbot-git-main-ayoms-projects.vercel.app/",
+      thumbnail: "classbot-thumb.png",
+    },
+    {
+      title: "Lingua",
+      link: "https://liguaa.vercel.app/",
+      thumbnail: "lingua-thumb.png",
+    },
+    {
+      title: "StoryAI",
+      link: "https://story-ai-sable.vercel.app/",
+      thumbnail: "storyai-thumb.jpg",
+    },
+    {
+      title: "Quizlon",
+      link: "https://quizlon.vercel.app/",
+      thumbnail: "quizlon-thumb2.png",
+    },
+    {
+      title: "Cryo Chat AI",
+      link: "https://cryo-chat-ai.vercel.app/",
+      thumbnail: "cyro-thumb2.png",
+    },
+  ];
+  return (
+    <main className="flex flex-col gap-8 items-center justify-between">
+      <FloatingNav navItems={navItems} />
+
+      <article className="w-full flex flex-col justify-center gap-20">
+        <section>
+          <HeroParallax products={products} />
+        </section>
+        <section className="w-full grid gap-3 grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 items-center">
+          <h1 className="max-w-2xl col-span-full mb-6 text-center text-4xl font-bold mx-auto">
+            Lets See Some Of Our Work, See The Amazing
+            <Cover>AI Project.</Cover>
+          </h1>
+          <PinContainer
+            className=""
+            title="Quizllon"
+            href="https://quizion-ai.vercel.app/"
           >
             <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
+              src="/logo/quizlon.svg"
+              height="600"
+              width="600"
+              alt="quizlon"
+              className="object-fill object-center h-full w-full inset-0"
             />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
+          </PinContainer>
+          <PinContainer
+            className="p-7"
+            title="Pyrotrip"
+            href="https://pyrotrip.vercel.app/"
           >
-            Read our docs
-          </a>
-        </div>
-      </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
+            <Image
+              src={`/logo/pyrotrip.svg`}
+              height="600"
+              width="600"
+              alt="pyrotrip ai"
+              className="object-fill  object-center inset-10"
+            />
+          </PinContainer>
+          <PinContainer
+            className="p-7"
+            title="Doxsummarizer"
+            href="https://doxsummarizer.vercel.app/"
+          >
+            <Image
+              src={`/logo/doxsummarizer.svg`}
+              height="200"
+              width="200"
+              alt="quizlon"
+              className="object-cover object-center h-full w-full inset-0"
+            />
+          </PinContainer>
+          <PinContainer title="Linguaa" href="https://linguaa.vercel.app/">
+            <Image
+              src={`/logo/lingua.png`}
+              height="200"
+              width="200"
+              alt="quizlon"
+              className="object-cover object-center h-full w-full inset-0"
+            />
+          </PinContainer>
+          <PinContainer
+            title="ClassBot"
+            href="https://chatbot-git-main-ayoms-projects.vercel.app/"
+          >
+            <Image
+              src={`/logo/classbot.svg`}
+              height="200"
+              width="200"
+              alt="quizlon"
+              className="object-cover object-center absolute rounded-xl h-full w-full inset-0"
+            />
+          </PinContainer>
+          <PinContainer
+            title="StoryAI"
+            href="https://story-ai-sable.vercel.app/"
+          >
+            <Image
+              src={`/logo/storyai.png`}
+              height="200"
+              width="200"
+              alt="quizlon"
+              className="object-cover object-center rounded-2xl absolute h-full w-full inset-0"
+            />
+          </PinContainer>
+          <PinContainer title="E-Fast" href="https://e-fast.vercel.app/">
+            <Image
+              src={`/logo/e-fast.png`}
+              height="200"
+              width="200"
+              alt="E-Fast"
+              className="object-cover object-center absolute h-full w-full inset-0"
+            />
+          </PinContainer>
+          <PinContainer
+            className="p-7"
+            title="Cryo Chat"
+            href="hhttps://cryo-chat-ai.vercel.app/"
+          >
+            <Image
+              src={`/logo/cryo.svg`}
+              height="60"
+              width="60"
+              alt="quizlon"
+              className="object-contain object-center max-h-[150px] w-52 inset-10"
+            />
+          </PinContainer>
+        </section>
+        <section className="w-full flex flex-col">
+          <div className="relative h-[20rem] w-full bg-black flex flex-col items-center justify-center overflow-hidden rounded-md">
+          <div className="absolute -inset-10 z-0 bg-gradient-to-t from-black via-[#0f172a] to-tranparent blur-2xl opacity-50"></div>
+            <h1 className="md:text-5xl text-3xl lg:text-7xl font-bold text-center text-white relative z-20">
+              Explore More
+            </h1>
+            <div className="w-[40rem] h-20 relative">
+              {/* Gradients */}
+              <div className="absolute inset-x-20 top-0 bg-gradient-to-r from-transparent via-indigo-500 to-transparent h-[2px] w-3/4 blur-sm" />
+              <div className="absolute inset-x-20 top-0 bg-gradient-to-r from-transparent via-indigo-500 to-transparent h-px w-3/4" />
+              <div className="absolute inset-x-60 top-0 bg-gradient-to-r from-transparent via-sky-500 to-transparent h-[5px] w-1/4 blur-sm" />
+              <div className="absolute inset-x-60 top-0 bg-gradient-to-r from-transparent via-sky-500 to-transparent h-px w-1/4" />
+
+              {/* Radial Gradient for smooth edges */}
+  
+            </div>
+
+            {/* Gradient on outer edge for blending */}
+            <div className="absolute -inset-10 z-0 bg-gradient-to-b from-black via-transparent to-[#0f172a] blur-2xl opacity-50"></div>
+          </div>
+
+          <ExpandableCard />
+        </section>
+      </article>
+    </main>
   );
 }
