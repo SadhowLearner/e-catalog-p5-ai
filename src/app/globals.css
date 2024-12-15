@@ -20,4 +20,5 @@ body {
   background: var(--background);
   font-family: "Roboto", serif;
   background: linear-gradient(to bottom, #19191a,black, #0f172a);
+  overflow-x: hidden;
 }
