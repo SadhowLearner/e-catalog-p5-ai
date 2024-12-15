@@ -23,7 +23,7 @@ export const Cover = ({
   useEffect(() => {
     if (ref.current) {
       setContainerWidth(ref.current?.clientWidth ?? 0);
-
+  
       const height = ref.current?.clientHeight ?? 0;
       const numberOfBeams = Math.floor(height / 10); // Adjust the divisor to control the spacing
       const positions = Array.from(
@@ -32,7 +32,8 @@ export const Cover = ({
       );
       setBeamPositions(positions);
     }
-  });
+  }, []); // Efek hanya berjalan sekali
+  
 
   return (
     <div
