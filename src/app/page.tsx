@@ -173,7 +173,7 @@ export default function Home() {
           <PinContainer
             className="p-7"
             title="Cryo Chat"
-            href="hhttps://cryo-chat-ai.vercel.app/"
+            href="https://cryo-chat-ai.vercel.app/"
           >
             <Image
               src={`/logo/cryo.svg`}
