@@ -104,10 +104,10 @@ export const HeroParallax = ({
 export const Header = () => {
   return (
     <div className="max-w-7xl relative flex flex-col justify-center lg:justify-start mx-auto py-20 md:py-40 px-4 w-screen left-0 top-0">
-      <h1 className="text-5xl md:text-7xl text-center lg:text-start font-bold dark:text-white">
+      <h1 className="text-5xl md:text-7xl text-center lg:text-start font-bold   text-white">
         The Projects <br /> from AI Class
       </h1>
-      <p className="max-w-2xl mx-auto lg:mx-0 text-base md:text-xl mt-12 lg:mt-8 text-center lg:text-start dark:text-neutral-200">
+      <p className="max-w-2xl mx-auto lg:mx-0 text-base md:text-xl mt-12 lg:mt-8 text-center lg:text-start text-neutral-200">
         We build AI products with the frameworks and API.
         We are a team of passionate developers who are passionate and curious about AI.
       </p>
