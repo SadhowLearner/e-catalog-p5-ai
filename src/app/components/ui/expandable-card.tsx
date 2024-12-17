@@ -75,7 +75,7 @@ export function ExpandableCard() {
                   priority
                   width={200}
                   height={200}
-                  src={`/thumbnails/${active.src}`}
+                  src={`/cover/${active.src}`}
                   alt={active.title}
                   className="w-full h-80 lg:h-80 sm:rounded-tr-lg sm:rounded-tl-lg object-cover object-top"
                 />
@@ -136,14 +136,14 @@ export function ExpandableCard() {
             onClick={() => setActive(card)}
             className="p-4 flex flex-col  hover:bg-neutral-50 dark:hover:bg-neutral-800 rounded-xl cursor-pointer"
           >
-            <div className="flex gap-4 flex-col  w-full">
+            <div className="flex gap-4 flex-col justify-center w-full">
               <motion.div layoutId={`image-${card.title}-${id}`}>
                 <Image
-                  width={600}
-                  height={600}
-                  src={`/thumbnails/${card.src}`}
+                  width={200}
+                  height={200}
+                  src={`/cover/${card.src}`}
                   alt={card.title}
-                  className="h-60 w-full  rounded-lg object-cover object-top"
+                  className="h-full w-full rounded-lg object-cover object-top"
                 />
               </motion.div>
               <div className="flex justify-center items-center flex-col">
@@ -204,22 +204,24 @@ export const CloseIcon = () => {
 const cards = [
   {
     description: "Ease Your Learning Path with Quizion.",
-    title: "Quizlon AI",
-    src: "quizlon-thumb.png",
+    title: "Quizion AI",
+    src: "quizion.png",
     ctaText: "Look Poster",
     ctaLink:
-      "https://drive.google.com/file/d/1NUPvCZRPP04GPJzEft7ZgwEDRSxventZ/view?usp=drive_link",
+      "https://quizion-ai.vercel.app/",
     content: () => {
       return (
         <p>
-          Website Quizion AI merupakan website kecerdasan buatan yang dirancang
-          untuk menghasilkan kuis dari materi yang diunggah dalam format PDF.
-          Website ini mampu menganalisis isi dokumen, memahami konten utama, dan
-          menghasilkan soal kuis yang relevan, berupa pilihan ganda. Bertujuan
-          untuk mempermudah pengajar atau siswa dalam menyusun bahan evaluasi
-          secara efisien dan mendukung pembelajaran yang lebih adaptif dan
-          efektif. Quizion juga untuk mendukung lingkungan pendidikan modern
-          yang berbasis teknologi.
+          The Quizion AI website is an artificial intelligence website designed
+          to to generate quizzes from materials uploaded in PDF format. This
+          website is able to analyze the content of the document, understand the
+          main content and generate relevant multiple-choice quiz questions.
+          Generate relevant multiple-choice quiz questions. Objectives Make it
+          easier for teachers or students to efficiently create assessment
+          materials and support more adaptive learning. and support more
+          adaptive and effective learning. effective learning. Quizion is also
+          designed to support the modern educational environment that is which
+          is based on technology.
         </p>
       );
     },
@@ -227,10 +229,10 @@ const cards = [
   {
     description: "Vacations become fun using PyroTrip",
     title: "PyroTrip",
-    src: "pyrotrip-thumb.png",
+    src: "pyrotrip.png",
     ctaText: "Look Poster",
     ctaLink:
-      "https://drive.google.com/file/d/1WdZf7CFXIrr8_L-UaS9zEzyicZ7S9d7G/view?usp=drive_link",
+      "https://pyrotrip.vercel.app/",
     content: () => {
       return (
         <p className="text-justify">
@@ -251,10 +253,10 @@ const cards = [
   {
     description: "Best for summarize any document",
     title: "Doxsummarizer",
-    src: "doxsummarizer-thumb.jpg",
+    src: "doxsummarizer.png",
     ctaText: "Look Poster",
     ctaLink:
-      "https://drive.google.com/file/d/1HJv8N92ad5cLdxB8nbI3VXnWwJlHOPV0/view?usp=drive_link",
+      "https://doxsummarizer.vercel.app/",
     content: () => {
       return (
         <p className="text-justify">
@@ -272,10 +274,10 @@ const cards = [
   {
     description: "Lingua: Your smart conversational companion.",
     title: "Lingua",
-    src: "lingua-thumb.png",
+    src: "lingua.png",
     ctaText: "Look Poster",
     ctaLink:
-      "https://drive.google.com/file/d/19tE68iH7JpTd6lhUARXOz7x8QlzRqylB/view?usp=drive_link",
+      "https://linguaa.vercel.app/",
     content: () => {
       return (
         <p className="text-justify">
@@ -293,10 +295,10 @@ const cards = [
   {
     description: "ClassBot AI helper for students ",
     title: "ClassBot",
-    src: "classbot-thumb.png",
+    src: "classbot.png",
     ctaText: "Look Poster",
     ctaLink:
-      "https://drive.google.com/file/d/1jG_73JkhH730Zjpscyne3NqBj_t5wu_N/view?usp=drive_link",
+      "https://chatbot-git-main-ayoms-projects.vercel.app/",
     content: () => {
       return (
         <p className="text-justify">
@@ -321,10 +323,10 @@ const cards = [
   {
     description: "Create Unlimited Stories",
     title: "StoryAI",
-    src: "storyai-thumb.jpg",
+    src: "storyai.jpg",
     ctaText: "Look Poster",
     ctaLink:
-      "https://drive.google.com/file/d/1nlIyxxFafSrZCc3UlOoMoM7udrYNwepJ/view?usp=drive_link",
+      "https://story-ai-sable.vercel.app/",
     content: () => {
       return (
         <p className="text-justify">
@@ -342,10 +344,10 @@ const cards = [
   {
     description: "Fast and easy AI solutions",
     title: "E-Fast",
-    src: "e-fast-thumb.svg",
+    src: "e-fast.png",
     ctaText: "Look Poster",
     ctaLink:
-      "https://drive.google.com/file/d/1hVc404AGqdWfQc14QhSxkpyUDba4MlRe/view?usp=drive_link",
+      "https://e-fast.vercel.app/",
     content: () => {
       return (
         <p className="text-justify">
@@ -361,10 +363,10 @@ const cards = [
   {
     description: "Chat with Cryo to supercharge your ideas.",
     title: "Cryo AI",
-    src: "cryo-thumb.png",
+    src: "cryo.png",
     ctaText: "Look Poster",
     ctaLink:
-      "https://drive.google.com/file/d/1l_5L-I1E0v-haxA8H8Pz4kFSe79QrZFA/view?usp=drive_link",
+      "https://cryo-chat-ai.vercel.app/",
     content: () => {
       return (
         <p className="text-justify">

@@ -1,27 +1,13 @@
 // import Image from "next/image";
 import Image from "next/image";
 import { PinContainer } from "./components/ui/3d-pin";
-import { FloatingNav } from "./components/ui/floating-navbar";
 import { HeroParallax } from "./components/ui/hero-parallax";
 import { Cover } from "./components/ui/cover";
 import { ExpandableCard } from "./components/ui/expandable-card";
 // import { motion } from "framer-motion";
 
 export default function Home() {
-  const navItems = [
-    {
-      name: "Home",
-      link: "/",
-    },
-    {
-      name: "About",
-      link: "/about",
-    },
-    {
-      name: "Contact",
-      link: "/contact",
-    },
-  ];
+
 
   const products = [
     {
@@ -46,9 +32,9 @@ export default function Home() {
       thumbnail: "pyrotrip-thumb.png",
     },
     {
-      title: "Quizlon AI",
+      title: "Quizion AI",
       link: "https://quizion-ai.vercel.app/",
-      thumbnail: "quizlon-thumb.png",
+      thumbnail: "quizion-thumb.png",
     },
     {
       title: "ClassBot",
@@ -66,9 +52,9 @@ export default function Home() {
       thumbnail: "storyai-thumb.jpg",
     },
     {
-      title: "Quizlon",
-      link: "https://quizlon.vercel.app/",
-      thumbnail: "quizlon-thumb2.png",
+      title: "quizion",
+      link: "https://quizion.vercel.app/",
+      thumbnail: "quizion-thumb2.png",
     },
     {
       title: "Cryo Chat AI",
@@ -77,8 +63,7 @@ export default function Home() {
     },
   ];
   return (
-    <main className="flex flex-col gap-8 items-center justify-between">
-      <FloatingNav navItems={navItems} />
+    <main className="flex flex-col gap-8 items-center justify-between overflow-x-hidden">
 
       <article className="w-full flex flex-col justify-center gap-20">
         <section>
@@ -95,10 +80,10 @@ export default function Home() {
             href="https://quizion-ai.vercel.app/"
           >
             <Image
-              src="/logo/quizlon.svg"
+              src="/logo/quizion.svg"
               height="600"
               width="600"
-              alt="quizlon"
+              alt="quizion"
               className="object-fill object-center h-full w-full inset-0"
             />
           </PinContainer>
@@ -124,7 +109,7 @@ export default function Home() {
               src={`/logo/doxsummarizer.svg`}
               height="200"
               width="200"
-              alt="quizlon"
+              alt="quizion"
               className="object-cover object-center h-full w-full inset-0"
             />
           </PinContainer>
@@ -133,7 +118,7 @@ export default function Home() {
               src={`/logo/lingua.png`}
               height="200"
               width="200"
-              alt="quizlon"
+              alt="quizion"
               className="object-cover object-center h-full w-full inset-0"
             />
           </PinContainer>
@@ -142,10 +127,10 @@ export default function Home() {
             href="https://chatbot-git-main-ayoms-projects.vercel.app/"
           >
             <Image
-              src={`/logo/classbot.svg`}
+              src={`/logo/classbot.png`}
               height="200"
               width="200"
-              alt="quizlon"
+              alt="classbot"
               className="object-cover object-center absolute rounded-xl h-full w-full inset-0"
             />
           </PinContainer>
@@ -154,10 +139,10 @@ export default function Home() {
             href="https://story-ai-sable.vercel.app/"
           >
             <Image
-              src={`/logo/storyai.png`}
+              src={`/logo/storyai.jpeg`}
               height="200"
               width="200"
-              alt="quizlon"
+              alt="quizion"
               className="object-cover object-center rounded-2xl absolute h-full w-full inset-0"
             />
           </PinContainer>
@@ -179,7 +164,7 @@ export default function Home() {
               src={`/logo/cryo.svg`}
               height="60"
               width="60"
-              alt="quizlon"
+              alt="quizion"
               className="object-contain object-center max-h-[150px] w-52 inset-10"
             />
           </PinContainer>
