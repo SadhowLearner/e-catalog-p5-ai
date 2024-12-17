@@ -73,8 +73,8 @@ export function ExpandableCard() {
               <motion.div layoutId={`image-${active.title}-${id}`}>
                 <Image
                   priority
-                  width={200}
-                  height={200}
+                  width={1000}
+                  height={1600}
                   src={`/cover/${active.src}`}
                   alt={active.title}
                   className="w-full h-80 lg:h-80 sm:rounded-tr-lg sm:rounded-tl-lg object-cover object-top"
@@ -116,7 +116,7 @@ export function ExpandableCard() {
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
                     exit={{ opacity: 0 }}
-                    className="text-neutral-600 text-xs md:text-sm lg:text-base h-40 md:h-fit pb-10 flex flex-col items-start gap-4 overflow-auto dark:text-neutral-400 [mask:linear-gradient(to_bottom,white,white,transparent)] [scrollbar-width:none] [-ms-overflow-style:none] [-webkit-overflow-scrolling:touch]"
+                    className="text-neutral-600 text-xs md:text-sm lg:text-base h-fit md:h-fit pb-10 flex flex-col items-start gap-4 overflow-auto dark:text-neutral-400 [mask:linear-gradient(to_bottom,white,white,transparent)] [scrollbar-width:none] [-ms-overflow-style:none] [-webkit-overflow-scrolling:touch]"
                   >
                     {typeof active.content === "function"
                       ? active.content()
@@ -128,34 +128,34 @@ export function ExpandableCard() {
           </div>
         ) : null}
       </AnimatePresence>
-      <ul className="w-full grid grid-cols-1 md:grid-cols-2 items-start gap-10">
+      <ul className="w-full grid grid-cols-1 md:grid-cols-2 place-items-center gap-10">
         {cards.map((card) => (
           <motion.div
             layoutId={`card-${card.title}-${id}`}
             key={card.title}
             onClick={() => setActive(card)}
-            className="p-4 flex flex-col  hover:bg-neutral-50 dark:hover:bg-neutral-800 rounded-xl cursor-pointer"
+            className="p-4 flex flex-col  max-w-96 hover:bg-neutral-50 dark:hover:bg-neutral-800 rounded-xl cursor-pointer"
           >
-            <div className="flex gap-4 flex-col justify-center w-full">
+            <div className="flex gap-4 flex-col justify-center max-w-full">
               <motion.div layoutId={`image-${card.title}-${id}`}>
                 <Image
-                  width={200}
-                  height={200}
+                  width={1000}
+                  height={1600}
                   src={`/cover/${card.src}`}
                   alt={card.title}
-                  className="h-full w-full rounded-lg object-cover object-top"
+                  className="h-auto max-w-full rounded-lg object-contain"
                 />
               </motion.div>
               <div className="flex justify-center items-center flex-col">
                 <motion.h3
                   layoutId={`title-${card.title}-${id}`}
-                  className="font-medium text-neutral-800 dark:text-neutral-200 text-center md:text-left text-base"
+                  className="font-medium text-neutral-200 text-center md:text-left text-base"
                 >
                   {card.title}
                 </motion.h3>
                 <motion.p
                   layoutId={`description-${card.description}-${id}`}
-                  className="text-neutral-600 dark:text-neutral-400 text-center md:text-left text-base"
+                  className="text-neutral-400 text-center md:text-left text-base"
                 >
                   {card.description}
                 </motion.p>
@@ -206,7 +206,7 @@ const cards = [
     description: "Ease Your Learning Path with Quizion.",
     title: "Quizion AI",
     src: "quizion.png",
-    ctaText: "Look Poster",
+    ctaText: "Try It",
     ctaLink:
       "https://quizion-ai.vercel.app/",
     content: () => {
@@ -230,7 +230,7 @@ const cards = [
     description: "Vacations become fun using PyroTrip",
     title: "PyroTrip",
     src: "pyrotrip.png",
-    ctaText: "Look Poster",
+    ctaText: "Try It",
     ctaLink:
       "https://pyrotrip.vercel.app/",
     content: () => {
@@ -254,7 +254,7 @@ const cards = [
     description: "Best for summarize any document",
     title: "Doxsummarizer",
     src: "doxsummarizer.png",
-    ctaText: "Look Poster",
+    ctaText: "Try It",
     ctaLink:
       "https://doxsummarizer.vercel.app/",
     content: () => {
@@ -275,7 +275,7 @@ const cards = [
     description: "Lingua: Your smart conversational companion.",
     title: "Lingua",
     src: "lingua.png",
-    ctaText: "Look Poster",
+    ctaText: "Try It",
     ctaLink:
       "https://linguaa.vercel.app/",
     content: () => {
@@ -296,7 +296,7 @@ const cards = [
     description: "ClassBot AI helper for students ",
     title: "ClassBot",
     src: "classbot.png",
-    ctaText: "Look Poster",
+    ctaText: "Try It",
     ctaLink:
       "https://chatbot-git-main-ayoms-projects.vercel.app/",
     content: () => {
@@ -324,7 +324,7 @@ const cards = [
     description: "Create Unlimited Stories",
     title: "StoryAI",
     src: "storyai.jpg",
-    ctaText: "Look Poster",
+    ctaText: "Try It",
     ctaLink:
       "https://story-ai-sable.vercel.app/",
     content: () => {
@@ -345,7 +345,7 @@ const cards = [
     description: "Fast and easy AI solutions",
     title: "E-Fast",
     src: "e-fast.png",
-    ctaText: "Look Poster",
+    ctaText: "Try It",
     ctaLink:
       "https://e-fast.vercel.app/",
     content: () => {
@@ -364,7 +364,7 @@ const cards = [
     description: "Chat with Cryo to supercharge your ideas.",
     title: "Cryo AI",
     src: "cryo.png",
-    ctaText: "Look Poster",
+    ctaText: "Try It",
     ctaLink:
       "https://cryo-chat-ai.vercel.app/",
     content: () => {
