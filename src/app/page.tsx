@@ -187,7 +187,7 @@ export default function Home() {
             </div>
 
             {/* Gradient on outer edge for blending */}
-            <div className="absolute -inset-10 z-0 bg-gradient-to-b from-black via-transparent to-[#0f172a] blur-2xl opacity-50"></div>
+            <div className="absolute -inset-10 z-0 bg-gradient-to-b from-black via-[#0f172a] to-transparent blur-2xl opacity-50"></div>
           </div>
 
           <ExpandableCard />
