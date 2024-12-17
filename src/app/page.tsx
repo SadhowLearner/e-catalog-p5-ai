@@ -4,7 +4,6 @@ import { PinContainer } from "./components/ui/3d-pin";
 import { HeroParallax } from "./components/ui/hero-parallax";
 import { Cover } from "./components/ui/cover";
 import { ExpandableCard } from "./components/ui/expandable-card";
-import Link from "next/link";
 // import { motion } from "framer-motion";
 
 export default function Home() {
