@@ -43,7 +43,7 @@ export default function Home() {
     },
     {
       title: "Lingua",
-      link: "https://liguaa.vercel.app/",
+      link: "https://linguaa.vercel.app/",
       thumbnail: "lingua-thumb.png",
     },
     {
